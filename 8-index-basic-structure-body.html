@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Esta es mi pagina!!" />
+    <meta name="robot" content="index,follow" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <h2>Existen dos tipos de etiquetas dentro de "body":</h2>
+        <li>
+            Etiquetas contenedoras:
+            <p>
+                Las etiquetas contenedoras son etiquetas que van a llevar más etiquetas por dentro, y <b>nos van a ayudar a generar una estructura de nuestra página web</b>, tal y como lo pudimos ver en la anatomía de nuestr página web.
+            </p>
+        </li>
+        <br/>
+        <li>
+            Etiquetas de contenido:
+            <p>
+                Son las etiquetas que van a llevar consigo el texto, las imágenes, vídeos, animaciones, y cualquier cosa que se vaya a renderizar en nuestro proyecto.
+                <br/>
+                Algunas de estas etiquetas son:
+                <ol>
+                    <li value="1"> <b>< header > < header / ></header></b>
+                        <br/>
+                        - La parte del encabezado de nuestra página web.
+                        <br/>
+                        - Sección superior de nuestra página web.
+                    </li>
+                    <br/>
+                    <li> <b>< nav > < /nav ></b>
+                        
+                        <br/>
+                        - Es la barra de navegación, comúnmente está dentro del 'header'.
+                        <br/>
+                        - Por dentro pueden ir bototes de búsqueda, barras de input text, número de página, en general, todo lo que tenga relación con la navegación de la web.
+                        <br/>
+                    </li>
+                    <br>
+                    <li> <b>< main > < /main ></b>
+                        <br/>
+                        - Es la parte principal de la página web, parte en la que va el contenido principal.
+                        <br/>
+                        - El "main" está fuera del 'header', por debajo del 'header'.
+                        <br/>
+                        - Le indica al navegador, que después del encabezado y de la barra de navegación, irá todo el contenido principal.
+                        <ul>
+                            <li type="square"><b>< section >< / section ></b>
+                                <br/>
+                                - Por dentro, el main está fragmentado por "< section > < / section >"
+                                <ul>
+                                    <li type="circle"> <b>< article> < / article ></b>
+                                        <br/>
+                                        - Para fragmentar las secciones, tenemos la etiqueta <b>article</b>.
+                                        <br/>
+                                        - Podemos tener una sección con diversos artículos.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br/>
+                        <ul>
+                            <li> <b>LISTAS:</b>
+                                <br/>
+                                Para trabajar con un contenido que lleve listas, por ejemplo, una lista de artículos, una lista del super, o de cualquier cosa, <b>tenemos dos maneras</b> para hacerlas, <b>< ol > < / ol ></b> y <b>< ul > < / ul ></b>.
+                                <br/>
+                                Estas dos etiquetas nos van a dar alistas diferentes, dependiendo del tipo de listas que sean:
+                                <dl>
+                                    <dt><b>< ol > < / ol ></b>: ordered list (listas ordenadas)</dt>
+                                    <dd>Con esta etiqueta se generarán listas ordenadas, todos los items puestos acá serán enumerados, desde el "<b>1.</b>", sin un límite que defina su finalidad, podemos ponder todos los items que queramos.</dd>
+
+                                </dl>
+                                <dl>
+                                    <dt><b>< ul > < / ul ></b>: unordered list (listas desordenadas)</dt>
+                                    <dd>
+                                        La lista que generemos con esta etiqueta, será una lista desordenada. Los items que estarán dentro de esta lista, se enlistarán con signos popularmente llamados "bullets", ya sean circulos, cuadrados y discos. Para definir cada tipo de bullet que se quiera usar, al momento de escribir el '< li >< / li >', como atricuto, se agrega type=" ", '<b>< li type=" " > < / li ></b>', y para definir el tipo de bullet, el valor cambiará dependiendo de cada tipo, por ejemplo.
+                                        <br/>
+                                        - Tipo círculo, type="circle"
+                                        <br/>
+                                        - Tipo cuadrado, type="square"
+                                        <br/>
+                                        - Tipo esfera vacía, type="disc"
+                                    </dd>
+                                </dl>
+                                Dentro de ambos tipos de listas, los items que serán enlistados se harán con la etiqueta '<b>< li > < / li ></b>', que significa "list item".
+                            </li>
+                            <br/>
+                            <li> <b>Algunas etiquetas de contenido de texto:</b>
+                                <dl>
+                                    <dt><b>< p > < / p ></b></dt>
+                                    <dd>Etiqueta para generar un párrafo</dd>
+                                </dl>
+                                <dl>
+                                    <dt><b>< h1 > < / h1 ></b>: encabezados</dt>
+                                    <dd>
+                                        Solo se usa una vez por página, esta regla es obligatoria.
+                                        <br/>
+                                        Se utiliza para hacer títulos.
+                                        <br/>
+                                        Hace el texto más grande que se pueda generar.
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><b>< h2 > < / h2 ></b> - <b>< h6 > < / h6 ></b></dt>
+                                    <dd>
+                                        Se utiliza para hacer títulos.
+                                        <br/>
+                                        Existe la lista de etiquetas para definir títulos, el tamaño del texto va a depender del número 1 al 6, siendo 1, el tamaño más grande, y 6, el tamaño más pequeño.
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><b>< a href=" "> < / a ></b></dt>
+                                    <dd>
+                                        Etiqueta "ancla".
+                                        <br/>
+                                        Nos ayuda a generar hipervínculos.
+                                        <br/>
+                                        <a href="#">Este es un "ancla".</a> < se utiliza un '#' para que cuando aún no se haya definido qué referencia, href tendrá, al hacer click, no nos lleve a ningún lugar, o nos nos redirija a ninguna otra página.
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li> <b>< footer > < / footer ></b>
+                        <br/>
+                        - Es el apartado que contendrá todo lo que corresponde al "pié de página".
+                    </li>
+                </ol>
+            </p>
+        </li>
+    </ul>
+    <p>
+        Todo lo que se ha redactado anteriormente viene siendo parte de la semántica de HTML, y nosotros, como buena práctica tenemos que utilizar HTML semántico.
+        <br/>
+        Esto quiere decir que, para cada tipo de acción tiene una etiqueta específica, por ejemplo, para definir la parte del encabezado, sí o sí se tiene que crear con la etiqueta '< header > < / header >',  para así, para cada tipo de acción que se quiera realizar.
+    </p>
+    <section>
+        <article>
+            <div>
+                <h3>Etiquetas para hacer listas, ordered list y unordered list:</h3>
+                <p>
+                    <h4>Lista de descripciones:</h4>
+                    <ul type="circle">
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Links:
+                    <br/>
+                    - <b>Información sobre todo tipo de listas HTML:</b> https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=514:listas-html-listas-no-ordenadas-ul-ordenadas-ol-de-definiciones-tag-li-etiquetas-dl-dt-dd-cu00718b
+                </p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

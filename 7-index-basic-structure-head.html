@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index: <head></title>
+</head>
+<body>
+    <header>
+        <h1>Index</h1>
+        <h3>
+            - La primera página siempre tiene que llamarse "index.html".
+            <br/>
+            - El index.html será la página inicial que el servidor buscará, por defecto, al momento de abrir o ejecutar un proyecto.
+            <br/>
+            - Cuando no tenemos una página index.html, nosotros debemos guiar al servidor, manualmente, para indicarle cuál sería nuestra página de inicio. De lo contrario, se visualizará toda la estructura de los directorios de archivos que tenemos en el proyecto.
+        </h3>
+        <p>Si nuestra aplicación web (WebApp) tiene más páginas, como por ejemplo, "contacto.html", "logging.html", etc; estas páginas las vamos a ligar a la única página principal, que vendría a ser "index.html".</p>
+    </header>
+    <section>
+        <article>
+            <ul>
+                <li>
+                    <b>< !DOCTYPE html ></b>
+                    <br/>
+                    Esta etiqueta le indicará al <b>Navegador</b> que la estructura que analizará, a continuación, será de HTML:5, y así es como entenderá todas las etiquetas de HTML:5.
+                </li>
+                <li>
+                    <b>< html lang="en"></b>
+                    <br/>
+                    "Contenedor principal" / "Contenedor padre", este contenedor llevará todas las etiquetas y todo el contenido que tendrá nuestro proyecto.
+                    <br/>
+                    Esta etiqueta llevará un atributo especial que será (<b>lang=" "</b>). El atributo lang es el encargado de decirle al Navegador qué lenguaje tendrá nuestro proyecto, ya sea Inglés, Español, Francés, o cualquiera que sea.
+                    <br/>
+                    Un ejemplo del uso del atributo lang, es para que el navegador sepa en qué idioma está la página que visitamos, y si está en un idioma distinto al nuestro, la pueda traducir a nuestro idioma.
+                    <br/>
+                    El valor de la etiqueta lang, es determinado por el tipo de idioma que tendrá la página web, por ejemplo, si es una web en español, será "es", lang="es", o si es una página en inglés, será "en", lang="en", o si es una página en francés, será "fr", lang="fr", y así, sucesivamente.
+                </li>
+                <li>
+                    <b>< head > < / head ></b>
+                    <br/>
+                    La etiqueta "head" es contenedor hermano de la etiqueta "body", porque estas dos etiquetas están en el mismo nivel de la estructura del DOM: Document Object Model.
+                    <br/>
+                    Aquí va todo lo que es importante y necesario para el navegador, para que pueda cargar el proyecto tal y como lo diseñamos. Esta sección del código NO ES VISUAL para el usuario final, o sea, todo lo que son <b>dependencias, librerías externas, fuentes, css</b>, etc; todo eso tiene que ir ligado dentro de la etiqueta < head > < / head >. En esta sección mandamos a llamar a fuentes externas.
+                </li>
+                <li>
+                    <b>< body > < / body ></b>
+                    <br/>
+                    Como ya se mencionó, la etiqueta "body" es contenedor hermano de la etiqueta "head", porque ambos están en el mismo nivel de la estructura del DOM: Document Object Model.
+                    <br/>
+                    El usuario final verá todo lo que va dentro de la etiqueta "< body > < / body >", todo lo que es texto, imágenes, videos, animaciones, etc; todo el aspecto interactivo que tendrá nuestro proyecto con el usuario, irá dentro del <b>body</b>.
+                </li>
+                <li>
+                    <b>Tabuladores:</b>
+                    Son los espacios que debemos dejar al momento de escribir cada etiqueta para generar una simetría cuando esribimos código, para tener una lectura limpia y una comprensión rápida, y el IDE o Editor de Texto nos pueda ayudar a visualizar las estructuras de cada etiqueta, indicándonos su apertura y cierre.
+                    <br/>
+                    - Hay etiquetas que tienen apertura y cierre, ejemplo, < body > < / body >, como también hay etiquetas que se autocierran, por ejemplo, < br / >
+                    <br/>
+                    - Como buena práctica, las etiquetas que no tienen etiquetas de cierre, ejemplo, "< meta />", deben llevar un slash/diagonal "/" antes del cierre.
+                </li>
+            </ul>
+            <p>Una analogía para entender la estructura entre el head y el body, sería como si fuera un cuerpo humano, ya que en head almacenaría todas las conexiones nerviosas que necesita nuestro cuerpo, pero que no son vizuales, y en el body iría todo lo que usamos en el día a día, como nuestras articulaciones, que es claramente visible para el resto de personas.</p>
+        </article>
+        <br/>
+        <article>
+            <div>
+                <p>Dentro de la etiqueta "head" irá todas las etiquetas queson importantes para el navegador para que el proyecto pueda cargar bien.</p>
+                <h3>meta</h3>
+                <p>
+                La etiqueta "< meta />" da cierta informacion al navegador, para que sepa como tratar a nuestro proyecto.
+                <br/>
+            </p>
+            </div>
+            <div>
+                <h4>Tipos de etiquetas "meta":</h4>
+                <ul>
+                    <li>
+                        <b>< meta charset="" /></b>
+                        <br/>
+                        <b>charset=" "</b> llevará un valor <b>"UTF-8"</b>, <b>< meta charset="UTF-8" /></b>, para que el navegador pueda entender una lista específica de caracteres especiales, para poder interpretarlos correctamente. También existe <b>UTF-16</b> y <b>UTF-32</b> que agrupan otro tipo de caracteres, pero estos dos últimos valores que almacenan otras listas, no son muy usados.
+                        <br/>
+                        Con "UTF-8" también <b>puedes agregar emojis</b> directamente al texto de la página, y se renderizarán como emojis.
+                    </li>
+                    <br/>
+                    <li>
+                        <b>< meta name="" />  -  < meta name="description" content="Texto que irá en la descripción de la web, al momento de aparecer en los resultados de búsqueda."/></b>
+                        <br/>
+                        - El atributo <b>name=" "</b> llevará un valor <b>"description"</b>.
+                        <br/>
+                        El manejo del valor "description" es parte del rol del <b>SEO</b>, <b>< meta name="description" /></b>, con esta etiqueta podremos añadir una breve descripción de la página, para que aparezca en el resultado de búsquedas en el Navegador.
+                        <br/>
+                        Contribuirá para que el navegador pueda ayudar a que cuando las personas busquen cierta información, el Navegador pueda relacioniar las palabras con la descripción que colocamos cuando nuestra web sea visible en el resultado de la búsqueda. 
+                        <br/>
+                        - El atributo <b>content=" "</b> será el encargado de almacenar la descripción que queramos que tenga nuestra página web, al momento de aparecer en los resultados de búsqueda del navegador.
+                    </li>
+                    <br/>
+                    <li>
+                        <b>< meta name="keywords" content="Aquí, irán, las, palabras, clave" /></b>
+                        <br/>
+                        Sirve para definir las palabras clave que ayudarán a los motores de búsqueda a mostrar nuestra página web al usuario, de una manera fácil y rápida.
+                    </li>
+                    <br/>
+                    <li>
+                        <b>< meta name="robots" content="index,follow" /></b> - Para indicarle a los robots de los buscadores en general.
+                        <br/>
+                        <b>< meta name="googlebot" content="index,follow" /></b> - Para indicarle, específicamente, a los robots del buscador de Google.
+                        <br/>
+                        Robots de posicionamiento de los navegadores
+                        <br/>
+                        Nos ayuda a indicar a los motores de búsqueda para que puedan indexar nuestra página web para poderlas posicionar entre las primeras páginas de la lista de resultados. 
+                        <br/>
+                        * <b>content="index,follow"</b> autoriza a ayudar a posicionar nuestra página en los resultados de búsquedas que tengan que ver con el contenido de nuestra web.
+                        <br/>
+                        El valor "follow" es importante para activar el seguimiento de nuestro "index". Para dejar de seguir nuestro index, o para desactivar el seguimiento, se reemplaza por "unfollow", quedando como <b>content="index,unfollow"</b>.
+                    </li>
+                    <br/>
+                    <li>
+                        <b>< title > < title / > </b>
+                        <br/>
+                        Sirve para redactar el título del proyecto, el nombre que pongamos a la página. Este texto aparecerá en la pestaña de la página, en el navegador. Es importante colocar el título.
+                    </li>
+                    <br/>
+                    <li>
+                        <b>< meta name="viewport" content="width=device-width, initial-scale=1.0" /></b>
+                        <br/>
+                        <b>name="viewport"</b> hace mención al tamaño o width completo de la pantalla. Quiere decir, el tamaño que se genera en tiempo real, al modificar estirándo el ancho de la pantalla, eso es un viewport.
+                        <br/>
+                        Es muy importante para los proyectos que son <b>Responsive Design</b>. Actualmente todos los proyectos que se están realizando y los proyectos que tenemos que realizar, son y serán 100% Responsive Design.
+                        <br/>
+                        Es importante asegurarnos que esa etiqueta <b>meta</b> exista en todos nuestros proyectos, ya que <b>nos ayuda a moldear el tamaño</b> del texto y las imágenes dependiendo del dispositivo desde donde lo estamos abriendo, ya sea en un dispositivo <b>mobile</b>, o desde un navegador en el Escritorio/<b>desktop</b>.
+                        <br/>
+                        Si no agregamos esa etiqueta en nuestro proyecto, al momento de abrir nuestro proyecto en un dispositivo mobile, el tamaño del texto se verá chiquito, y habrá una desconfiguración en la posición del texto y las imágenes, y eso es una muy mala experiencia para el usuario.
+                        <br/>
+                    </li>
+                    <br/>
+                    <li>
+                        Es MUY IMPORTANTE asegurarnos que el usuario no pase por ninguna mala experiencia al momento de probar nuestra aplicación o WebApp.
+                    </li>
+                    <br/>
+                    <li>
+                        < link rel="stylesheet" href="style.css">
+                        <br/>
+                        <b>rel="stylesheet"</b>  -  Indica que el documento que se cargará, será una hoja de estilos.
+                        <br/>
+                        <b>href="style.css"</b>  -  Indica la referencia de dónde se encontrará ese documento. Como valor, <b>se coloca la ruta</b> en donde se encontrará el documento.
+                    </li>
+                    <br/>
+                    <li>
+                        TENEMOS QUE SER MUY DESCRIPTIVOS al momento de elegir los nombres de los documentos de texto donde se costruirá cada parte de nuestros proyectos.
+                    </li>
+                </ul>
+            </div>                
+        </article>
+        <br/>
+        <article>
+            <h3>Links de referencia:</h3>
+            <p>
+                PDF con todas las Etiquetas de HTML5: https://i.emezeta.com/weblog/html5-cheatsheet/html5-cheatsheet-2019.pdf
+                <br/>
+                Página que ayuda mucho para conocer las etiquetas HTML y su tipo de display: https://htmlreference.io/
+                <br/>
+                Etiquetas HTML, versión "Tabla Periódica": https://allthetags.com/  -  https://lenguajehtml.com/html/introduccion/tabla-periodica-html5/
+                <br/>
+                Tipología "Jetbrains Mono", tiene distintas ligaduras y es muy bonita: https://www.jetbrains.com/lp/mono/
+                <br/>
+                Agregar ícono a nuestra página web: https://platzi.com/comentario/2637880/
+            </p>
+        </article>
+        <br/>
+        <article>
+            <h3>Imágenes:</h3>
+            <div>
+                <ul>
+                    <li>
+                        <br/>
+                        <img src="https://static.platzi.com/media/user_upload/IMG_2482-8ed7b477-9bdc-44e5-951e-b76fcd8449c1.jpg" alt="">
+                    </li>
+                    <br/>
+                    <li>
+                        <br/>
+                        <img src="https://static.platzi.com/media/user_upload/IMG_2483-b30a2a81-cc35-4117-9fd3-4808624f97b5.jpg" alt="">
+                    </li>
+                    <br/>
+                    <li>
+                        <br/>
+                        <img src="https://static.platzi.com/media/user_upload/html-13c81740-4f89-4aeb-8e1b-1c5df3188df4.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
